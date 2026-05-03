@@ -1,6 +1,4 @@
-export default function Home({ params }: PageProps<"/">) {
-  void params;
-
+export default function Home() {
   return (
     <main>
       <h1>Hello World</h1>
