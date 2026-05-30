@@ -1,0 +1,2058 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Time Audit — Wireframes</title>
+    <link rel="stylesheet" href="sketch.css?v=9" />
+  </head>
+  <body>
+    <svg class="defs" aria-hidden="true">
+      <filter id="wob">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.013"
+          numOctaves="2"
+          seed="7"
+          result="n"
+        />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" />
+      </filter>
+    </svg>
+
+    <!-- ============================== TOOLBAR ============================== -->
+    <header class="toolbar">
+      <div class="brand">Time&nbsp;Audit<small>wireframes · v1</small></div>
+      <nav class="screen-nav" id="nav">
+        <button data-s="map" class="active">Map</button>
+        <button data-s="auth">Sign&nbsp;up</button>
+        <button data-s="tasks">Tasks ★</button>
+        <button data-s="projects">Projects</button>
+        <button data-s="timer">Timer ★</button>
+        <button data-s="setup">Session&nbsp;setup</button>
+        <button data-s="checkin">Check-in</button>
+        <button data-s="banner">Floating&nbsp;bar</button>
+        <button data-s="insights">Insights ★</button>
+      </nav>
+      <div class="toggles">
+        <label class="toggle on" id="t-notes"
+          ><span class="box"></span> Annotations</label
+        >
+        <label class="toggle on" id="t-accent"
+          ><span class="box"></span> Blue accent</label
+        >
+      </div>
+    </header>
+
+    <!-- ============================== MAP / OVERVIEW ============================== -->
+    <section class="screen active" id="map">
+      <div class="screen-head">
+        <span class="tag">start here</span>
+        <h2>The design space</h2>
+        <p class="intent">
+          Rough directions for every MVP screen, loosely inspired by Rize but
+          rebuilt for an ADHD uni student: one obvious next action, fewer
+          decisions per screen, calm neutral stats (no guilt-red). ★ = the three
+          screens we explored hardest. Use the tabs above to flip through.
+        </p>
+      </div>
+
+      <div class="panels cols" style="gap: 20px">
+        <div class="box sk" style="width: 300px">
+          <div class="edge"></div>
+          <div class="h2">① Sign up</div>
+          <p class="sub">
+            Lowest-friction entry. Email + password, stay logged in. 2
+            directions.
+          </p>
+        </div>
+        <div class="box sk" style="width: 300px">
+          <div class="edge"></div>
+          <div class="h2">② Tasks ★</div>
+          <p class="sub">
+            The home base. Dense table vs. due-date groups vs. "one next thing".
+            3 directions.
+          </p>
+        </div>
+        <div class="box sk" style="width: 300px">
+          <div class="edge"></div>
+          <div class="h2">③ Projects</div>
+          <p class="sub">
+            Group tasks, see lifetime time spent. 2 directions. (Subjects = v2.)
+          </p>
+        </div>
+        <div class="box sk" style="width: 300px">
+          <div class="edge"></div>
+          <div class="h2">④ Timer ★</div>
+          <p class="sub">
+            The pomodoro loop. Big calm ring vs. zero-chrome vs. interval map. 3
+            directions.
+          </p>
+        </div>
+        <div class="box sk" style="width: 300px">
+          <div class="edge"></div>
+          <div class="h2">⑤ Session setup</div>
+          <p class="sub">
+            Pick task + goal, intervals, durations. Panel vs. wizard. 2
+            directions.
+          </p>
+        </div>
+        <div class="box sk" style="width: 300px">
+          <div class="edge"></div>
+          <div class="h2">⑥ Check-in</div>
+          <p class="sub">
+            Focus score 1–10 before the break. The accountability
+            differentiator. 2 directions.
+          </p>
+        </div>
+        <div class="box sk" style="width: 300px">
+          <div class="edge"></div>
+          <div class="h2">⑦ Floating bar</div>
+          <p class="sub">
+            The movable always-on-top reminder you love. 3 directions.
+          </p>
+        </div>
+        <div class="box sk" style="width: 300px">
+          <div class="edge"></div>
+          <div class="h2">⑧ Insights</div>
+          <p class="sub">
+            Day / week / month breakdowns + average focus score. 3 directions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== AUTH ============================== -->
+    <section class="screen" id="auth">
+      <div class="screen-head">
+        <span class="tag">authentication</span>
+        <h2>Sign up &amp; log in</h2>
+        <p class="intent">
+          Email + password, stored securely, stays logged in until the user logs
+          out. Keep it warm and unintimidating — the first impression should
+          feel like a calm tool, not a productivity bootcamp.
+        </p>
+      </div>
+
+      <div class="panels cols" style="gap: 40px">
+        <!-- A -->
+        <div class="panel" style="width: 560px">
+          <div class="panel-label">
+            <span class="letter">A</span> Split — brand left, form right
+          </div>
+          <p class="panel-sub">
+            Familiar SaaS pattern. Left panel sets a calm tone with one line of
+            promise.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="flex" style="min-height: 380px">
+                  <div
+                    class="col jc"
+                    style="
+                      width: 46%;
+                      background: var(--accent-bg);
+                      border-right: 2px solid var(--line);
+                      padding: 26px;
+                    "
+                  >
+                    <div class="h1">Know where<br />your day goes.</div>
+                    <p class="sub mt8">
+                      A gentle timer + audit loop made for ADHD brains. No
+                      streak shame.
+                    </p>
+                    <div class="hatch mt20" style="height: 120px">
+                      illustration / calm visual
+                    </div>
+                  </div>
+                  <div
+                    class="col jc"
+                    style="flex: 1; padding: 30px 28px; gap: 0"
+                  >
+                    <div class="h2">Create your account</div>
+                    <p class="field-label mt8">Email</p>
+                    <div class="inp block">you@uni.edu</div>
+                    <p class="field-label mt14">Password</p>
+                    <div class="inp block">••••••••</div>
+                    <p class="field-label mt14">Confirm password</p>
+                    <div class="inp block">••••••••</div>
+                    <button class="btn primary block mt20">
+                      Create account →
+                    </button>
+                    <p class="sub tcenter mt14">
+                      Already have one? <b>Log in</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>One promise line only — no feature list to read.</li>
+              <li>
+                "Stay logged in" is the default; no checkbox to decide on.
+              </li>
+              <li>Log-in reuses the exact same right panel (toggle copy).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- B -->
+        <div class="panel" style="width: 430px">
+          <div class="panel-label">
+            <span class="letter">B</span> Centered minimal card
+          </div>
+          <p class="panel-sub">
+            Even fewer pixels. The whole screen is one friendly card.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="center" style="min-height: 380px; padding: 24px">
+                  <div class="box sk" style="width: 300px">
+                    <div class="edge"></div>
+                    <div class="h1 tcenter">Welcome 👋</div>
+                    <p class="sub tcenter">Let's set up in 20 seconds.</p>
+                    <div class="seg mt14" style="width: 100%">
+                      <span class="on" style="flex: 1; text-align: center"
+                        >Sign up</span
+                      ><span style="flex: 1; text-align: center">Log in</span>
+                    </div>
+                    <p class="field-label mt14">Email</p>
+                    <div class="inp block">you@uni.edu</div>
+                    <p class="field-label mt14">Password</p>
+                    <div class="inp block">••••••••</div>
+                    <button class="btn primary block mt20">
+                      Get started →
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>Sign up / log in is one segmented toggle — same form.</li>
+              <li>Confirm-password only appears in sign-up mode.</li>
+              <li>Reads as a phone-app onboarding → familiar to students.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== TASKS ============================== -->
+    <section class="screen" id="tasks">
+      <div class="screen-head">
+        <span class="tag">hero screen ★</span>
+        <h2>Task dashboard</h2>
+        <p class="intent">
+          Everything to do, with lifetime time-spent per task. The big design
+          question: how much structure helps vs. overwhelms an ADHD student.
+          Three points on that spectrum.
+        </p>
+      </div>
+
+      <div class="panels">
+        <!-- A: Rize-like table -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">A</span> Familiar table (Rize-style)
+          </div>
+          <p class="panel-sub">
+            Sortable columns, status pills, time-spent column. Most
+            information-dense, most "pro".
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="app">
+                  <aside class="sidebar">
+                    <div class="ws-switch">
+                      <span class="av"></span> Sam's space ⌄
+                    </div>
+                    <div class="nav-item active">
+                      <span class="ico"></span> Tasks
+                    </div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Projects
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Timer</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Insights
+                    </div>
+                    <div class="nav-sec">account</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Settings
+                    </div>
+                  </aside>
+                  <div class="content">
+                    <div class="metric-strip">
+                      <div class="metric accent">
+                        <b>2h 40m</b><span>focus today</span>
+                      </div>
+                      <div class="metric"><b>5</b><span>tasks open</span></div>
+                    </div>
+                    <div class="between mb14">
+                      <div class="h1">Tasks</div>
+                      <div class="flex gap10">
+                        <span class="pill">Sort: due date ⌄</span
+                        ><button class="btn primary">+ New task</button>
+                      </div>
+                    </div>
+                    <div class="flex gap10 mb14">
+                      <span class="chip accent">All</span
+                      ><span class="chip"
+                        ><span
+                          class="sw"
+                          style="background: var(--ink-faint)"
+                        ></span>
+                        Time Audit App</span
+                      ><span class="chip"
+                        ><span class="sw"></span> Stanford Pathway</span
+                      >
+                    </div>
+                    <table class="tbl">
+                      <tr>
+                        <th>Task</th>
+                        <th>Project</th>
+                        <th>Due</th>
+                        <th>Time spent</th>
+                        <th>Status</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cell-task"
+                            ><span class="row-ico">TA</span> Finish API
+                            contract</span
+                          >
+                        </td>
+                        <td>
+                          <span class="chip"
+                            ><span class="sw"></span>Time Audit App</span
+                          >
+                        </td>
+                        <td>Today</td>
+                        <td>3h 46m</td>
+                        <td><span class="pill">In progress</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cell-task"
+                            ><span class="row-ico">MS</span> MS EE eligibility
+                            check</span
+                          >
+                        </td>
+                        <td class="muted">—</td>
+                        <td>Tomorrow</td>
+                        <td>25m</td>
+                        <td><span class="pill">In progress</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cell-task"
+                            ><span class="row-ico">CR</span> Create plan
+                            dashboard</span
+                          >
+                        </td>
+                        <td>
+                          <span class="chip"
+                            ><span class="sw"></span>Time Audit App</span
+                          >
+                        </td>
+                        <td>Fri</td>
+                        <td>10m</td>
+                        <td><span class="pill">To do</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cell-task"
+                            ><span class="row-ico">TR</span> Transfer storage to
+                            Drive</span
+                          >
+                        </td>
+                        <td class="muted">—</td>
+                        <td>Next week</td>
+                        <td>0m</td>
+                        <td><span class="pill">To do</span></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>Closest to what Sam already knows from Rize/Notion.</li>
+              <li>Risk: 5 columns = 5 things to scan. Can feel like work.</li>
+              <li>Filter chips by project; sort defaults to due date.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- B: grouped by due date -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">B</span> Grouped by when it's due
+          </div>
+          <p class="panel-sub">
+            No date column to read — the <i>group heading</i> is the date. Cuts
+            decisions; priority is spatial.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="app">
+                  <aside class="sidebar">
+                    <div class="ws-switch">
+                      <span class="av"></span> Sam's space ⌄
+                    </div>
+                    <div class="nav-item active">
+                      <span class="ico"></span> Tasks
+                    </div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Projects
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Timer</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Insights
+                    </div>
+                  </aside>
+                  <div class="content">
+                    <div class="between mb14">
+                      <div class="h1">Tasks</div>
+                      <button class="btn primary">+ New task</button>
+                    </div>
+                    <div class="nav-sec" style="margin-left: 0">
+                      today · 2 left
+                    </div>
+                    <div class="box mb8 between" style="padding: 12px 14px">
+                      <div>
+                        <b>Finish API contract</b>
+                        <span class="chip" style="margin-left: 8px"
+                          ><span class="sw"></span>Time Audit App</span
+                        >
+                        <div class="sub">3h 46m logged</div>
+                      </div>
+                      <button class="btn primary">▶ Start</button>
+                    </div>
+                    <div class="box mb8 between" style="padding: 12px 14px">
+                      <div>
+                        <b>MS EE eligibility check</b>
+                        <div class="sub">25m logged</div>
+                      </div>
+                      <button class="btn ghost">▶ Start</button>
+                    </div>
+                    <div class="nav-sec" style="margin-left: 0">
+                      this week · 2
+                    </div>
+                    <div class="box mb8 between" style="padding: 12px 14px">
+                      <div>
+                        <b>Create plan dashboard</b>
+                        <span class="chip" style="margin-left: 8px"
+                          ><span class="sw"></span>Time Audit App</span
+                        >
+                        <div class="sub">10m logged</div>
+                      </div>
+                      <button class="btn ghost">▶ Start</button>
+                    </div>
+                    <div class="box mb8 between" style="padding: 12px 14px">
+                      <div>
+                        <b>Transfer storage to Drive</b>
+                        <div class="sub">not started</div>
+                      </div>
+                      <button class="btn ghost">▶ Start</button>
+                    </div>
+                    <div class="nav-sec" style="margin-left: 0">
+                      later · 6 hidden
+                    </div>
+                    <div class="box soft tcenter sub" style="padding: 10px">
+                      show later tasks ⌄
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>
+                Every row has a <b>▶ Start</b> → task flows straight into the
+                timer.
+              </li>
+              <li>
+                "Later" is collapsed so the screen never feels like a wall.
+              </li>
+              <li>
+                Time-spent shown inline, quietly — never as a red warning.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- C: one next thing -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">C</span> "One next thing" focus mode
+          </div>
+          <p class="panel-sub">
+            Most opinionated. Surfaces a single suggested task huge; the rest is
+            a quiet list underneath.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="app">
+                  <aside class="sidebar">
+                    <div class="ws-switch">
+                      <span class="av"></span> Sam's space ⌄
+                    </div>
+                    <div class="nav-item active">
+                      <span class="ico"></span> Tasks
+                    </div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Projects
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Timer</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Insights
+                    </div>
+                  </aside>
+                  <div class="content">
+                    <p class="sub">
+                      Good afternoon, Sam — here's the one to start with.
+                    </p>
+                    <div
+                      class="box sk mt8"
+                      style="
+                        background: var(--accent-bg);
+                        border-color: var(--accent);
+                      "
+                    >
+                      <div
+                        class="edge"
+                        style="border-color: var(--accent)"
+                      ></div>
+                      <div
+                        class="nav-sec"
+                        style="margin: 0 0 6px; color: var(--accent-ink)"
+                      >
+                        next up · due today
+                      </div>
+                      <div class="h1" style="font-size: 30px">
+                        Finish API contract
+                      </div>
+                      <p class="sub">Time Audit App · 3h 46m logged so far</p>
+                      <button class="btn primary big mt14">
+                        ▶ Start 25-min focus
+                      </button>
+                    </div>
+                    <div class="between mt20 mb8">
+                      <div class="h2" style="margin: 0">After that</div>
+                      <span class="pill">+ New task</span>
+                    </div>
+                    <div
+                      class="between"
+                      style="
+                        padding: 8px 4px;
+                        border-bottom: 1.5px dashed var(--ink-faint);
+                      "
+                    >
+                      <span
+                        ><span class="row-ico">MS</span>MS EE eligibility check
+                        · tmrw</span
+                      ><span class="sub">25m</span>
+                    </div>
+                    <div
+                      class="between"
+                      style="
+                        padding: 8px 4px;
+                        border-bottom: 1.5px dashed var(--ink-faint);
+                      "
+                    >
+                      <span
+                        ><span class="row-ico">CR</span>Create plan dashboard ·
+                        Fri</span
+                      ><span class="sub">10m</span>
+                    </div>
+                    <div class="between" style="padding: 8px 4px">
+                      <span
+                        ><span class="row-ico">TR</span>Transfer storage to
+                        Drive · next wk</span
+                      ><span class="sub">0m</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>
+                Removes the "what do I even start with" paralysis entirely.
+              </li>
+              <li>One enormous, unmissable Start button (your ask).</li>
+              <li>
+                Could feel <i>too</i> prescriptive — needs an easy "pick
+                another".
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="screen" id="projects">
+      <div class="screen-head">
+        <span class="tag">organise</span>
+        <h2>Projects dashboard</h2>
+        <p class="intent">
+          Group tasks under a project and see lifetime time spent on each — so
+          Sam can plan future time blocks from real data. (Subjects, the level
+          above projects, are deferred to v2 per the PRD.)
+        </p>
+      </div>
+
+      <div class="panels">
+        <!-- A table -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">A</span> Table with lifetime time
+          </div>
+          <p class="panel-sub">
+            Mirrors the Tasks table for consistency; the headline column is
+            Total time.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="app">
+                  <aside class="sidebar">
+                    <div class="ws-switch">
+                      <span class="av"></span> Sam's space ⌄
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Tasks</div>
+                    <div class="nav-item active">
+                      <span class="ico"></span> Projects
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Timer</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Insights
+                    </div>
+                  </aside>
+                  <div class="content">
+                    <div class="between mb14">
+                      <div class="h1">Projects</div>
+                      <button class="btn primary">+ New project</button>
+                    </div>
+                    <table class="tbl">
+                      <tr>
+                        <th>Project</th>
+                        <th>Tasks</th>
+                        <th>Due</th>
+                        <th>Total time</th>
+                        <th>Status</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cell-task"
+                            ><span class="row-ico">TA</span>Time Audit App</span
+                          >
+                        </td>
+                        <td>4 open</td>
+                        <td>Jul 20</td>
+                        <td><b>22h 16m</b></td>
+                        <td><span class="pill">In progress</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cell-task"
+                            ><span class="row-ico">ST</span>Stanford
+                            Pathway</span
+                          >
+                        </td>
+                        <td>2 open</td>
+                        <td class="muted">—</td>
+                        <td><b>12h 55m</b></td>
+                        <td><span class="pill">In progress</span></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cell-task"
+                            ><span class="row-ico">CS</span>CS &amp; SWE
+                            Learning</span
+                          >
+                        </td>
+                        <td>3 open</td>
+                        <td class="muted">—</td>
+                        <td><b>1h 42m</b></td>
+                        <td><span class="pill">In progress</span></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>Consistent muscle-memory with the Tasks table.</li>
+              <li>Click a row → that project's filtered task list.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- B cards -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">B</span> Cards with a time bar
+          </div>
+          <p class="panel-sub">
+            More glanceable & friendly. Each card shows total time as a calm
+            neutral bar, not a budget you're "burning".
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="app">
+                  <aside class="sidebar">
+                    <div class="ws-switch">
+                      <span class="av"></span> Sam's space ⌄
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Tasks</div>
+                    <div class="nav-item active">
+                      <span class="ico"></span> Projects
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Timer</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Insights
+                    </div>
+                  </aside>
+                  <div class="content">
+                    <div class="between mb14">
+                      <div class="h1">Projects</div>
+                      <button class="btn primary">+ New project</button>
+                    </div>
+                    <div class="flex wrap gap14">
+                      <div class="box sk" style="width: calc(50% - 7px)">
+                        <div class="edge"></div>
+                        <div class="flex ac gap10">
+                          <span class="row-ico">TA</span><b>Time Audit App</b>
+                        </div>
+                        <div class="h1 mt8" style="font-size: 28px">
+                          22h 16m
+                        </div>
+                        <p class="sub">4 open tasks · due Jul 20</p>
+                        <div class="catrow" style="grid-template-columns: 1fr">
+                          <div class="meter">
+                            <span
+                              style="width: 80%; background: var(--accent)"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box sk" style="width: calc(50% - 7px)">
+                        <div class="edge"></div>
+                        <div class="flex ac gap10">
+                          <span class="row-ico">ST</span><b>Stanford Pathway</b>
+                        </div>
+                        <div class="h1 mt8" style="font-size: 28px">
+                          12h 55m
+                        </div>
+                        <p class="sub">2 open tasks</p>
+                        <div class="catrow" style="grid-template-columns: 1fr">
+                          <div class="meter">
+                            <span style="width: 46%"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box sk" style="width: calc(50% - 7px)">
+                        <div class="edge"></div>
+                        <div class="flex ac gap10">
+                          <span class="row-ico">CS</span
+                          ><b>CS &amp; SWE Learning</b>
+                        </div>
+                        <div class="h1 mt8" style="font-size: 28px">1h 42m</div>
+                        <p class="sub">3 open tasks</p>
+                        <div class="catrow" style="grid-template-columns: 1fr">
+                          <div class="meter">
+                            <span style="width: 8%"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="box soft center sub"
+                        style="width: calc(50% - 7px); min-height: 120px"
+                      >
+                        + new project
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>
+                Time-spent bars are relative, neutral grey/blue — never "over
+                budget".
+              </li>
+              <li>Cards are bigger hit targets; easier to scan at a glance.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== TIMER ============================== -->
+    <section class="screen" id="timer">
+      <div class="screen-head">
+        <span class="tag">hero screen ★</span>
+        <h2>Timer — full page</h2>
+        <p class="intent">
+          The big-screen view of the pomodoro for when Sam has a second monitor.
+          Shows the countdown, the current task and the session goal. Three
+          takes on how much to show.
+        </p>
+      </div>
+
+      <div class="panels">
+        <!-- A Rize-like -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">A</span> Calm ring + session panel
+          </div>
+          <p class="panel-sub">
+            Rize echo: a large ring centre-stage, with the goal & task living in
+            a side panel.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="app">
+                  <aside class="sidebar">
+                    <div class="ws-switch">
+                      <span class="av"></span> Sam's space ⌄
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Tasks</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Projects
+                    </div>
+                    <div class="nav-item active">
+                      <span class="ico"></span> Timer
+                    </div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Insights
+                    </div>
+                  </aside>
+                  <div
+                    class="content flex"
+                    style="gap: 24px; align-items: stretch"
+                  >
+                    <div class="col jc ac grow">
+                      <div
+                        class="timer-ring wobble"
+                        style="width: 230px; height: 230px"
+                      >
+                        <div class="inner">
+                          <div class="time" style="font-size: 52px">24:18</div>
+                          <div class="cap">focus time left</div>
+                        </div>
+                      </div>
+                      <div class="flex gap14 mt20">
+                        <button class="btn">⏸</button
+                        ><button class="btn">■ End</button
+                        ><button class="btn">+ time</button>
+                      </div>
+                    </div>
+                    <div class="box" style="width: 250px">
+                      <div class="tabs mb14">
+                        <span class="on">This session</span
+                        ><span>Timeline</span>
+                      </div>
+                      <p class="field-label">Goal</p>
+                      <div class="inp block">Draft every endpoint</div>
+                      <p class="field-label mt14">Task</p>
+                      <div class="chip mt8">
+                        <span class="sw"></span>Finish API contract ⌄
+                      </div>
+                      <p class="field-label mt14">Project</p>
+                      <div class="chip mt8">
+                        <span class="sw"></span>Time Audit App
+                      </div>
+                      <p class="sub mt20">Interval 2 of 4</p>
+                      <div class="dots mt8">
+                        <span class="d done"></span><span class="d now"></span
+                        ><span class="d"></span><span class="d"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>The goal text is what later shows on the floating bar.</li>
+              <li>
+                Task is changeable mid-session via the ⌄ without losing the
+                ring.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- B zero chrome -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">B</span> Zero-chrome focus
+          </div>
+          <p class="panel-sub">
+            Maximum calm. Sidebar collapses, everything but the timer + task +
+            one button fades. Built for "don't make me think".
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title"
+                    ><small>focus mode · press Esc to exit</small></span
+                  >
+                </div>
+                <div
+                  class="center"
+                  style="
+                    min-height: 430px;
+                    flex-direction: column;
+                    background: var(--paper-2);
+                  "
+                >
+                  <p class="sub">working on</p>
+                  <div class="h1" style="font-size: 30px">
+                    Finish API contract
+                  </div>
+                  <div
+                    class="timer-ring wobble mt20"
+                    style="width: 280px; height: 280px; border-width: 18px"
+                  >
+                    <div class="inner">
+                      <div class="time" style="font-size: 66px">24:18</div>
+                      <div class="cap">goal: draft every endpoint</div>
+                    </div>
+                  </div>
+                  <button class="btn ghost mt28" style="font-size: 15px">
+                    ⏸ pause · ■ end
+                  </button>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>
+                The single most ADHD-friendly state — nothing to click but the
+                task.
+              </li>
+              <li>No metrics, no nav, no numbers besides the count.</li>
+              <li>Doubles as the second-monitor "glance" screen.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- C interval map -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">C</span> Interval map
+          </div>
+          <p class="panel-sub">
+            Makes the whole session visible: focus blocks and breaks as a row of
+            dots, so Sam can see the finish line.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="app">
+                  <aside class="sidebar">
+                    <div class="ws-switch">
+                      <span class="av"></span> Sam's space ⌄
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Tasks</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Projects
+                    </div>
+                    <div class="nav-item active">
+                      <span class="ico"></span> Timer
+                    </div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Insights
+                    </div>
+                  </aside>
+                  <div class="content col ac jc">
+                    <div class="chip accent">
+                      Finish API contract · Time Audit App
+                    </div>
+                    <div
+                      class="timer-ring wobble mt14"
+                      style="width: 210px; height: 210px"
+                    >
+                      <div class="inner">
+                        <div class="time" style="font-size: 48px">24:18</div>
+                        <div class="cap">focus 2 of 4</div>
+                      </div>
+                    </div>
+                    <p class="sub mt20 mb8">your session</p>
+                    <div class="dots" style="gap: 14px">
+                      <span class="d done"></span><span class="d brk"></span>
+                      <span class="d now"></span><span class="d brk"></span>
+                      <span class="d"></span><span class="d brk"></span>
+                      <span class="d"></span>
+                    </div>
+                    <div class="legend mt14">
+                      <span><i></i> focus block</span
+                      ><span
+                        ><i
+                          style="border-style: dashed; border-radius: 50%"
+                        ></i>
+                        break</span
+                      ><span
+                        ><i style="background: var(--accent)"></i> done</span
+                      >
+                    </div>
+                    <div class="flex gap14 mt20">
+                      <button class="btn">⏸ pause</button
+                      ><button class="btn primary">skip to break</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>
+                Seeing "3 blocks left" gives ADHD brains a concrete finish line.
+              </li>
+              <li>
+                Breaks are first-class, dashed dots — rest is part of the plan.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SESSION SETUP ============================== -->
+    <section class="screen" id="setup">
+      <div class="screen-head">
+        <span class="tag">before you start</span>
+        <h2>Session setup &amp; entry</h2>
+        <p class="intent">
+          Pick a task (existing or new), set a goal, choose interval length &
+          count. If the task already has a project it autofills. After a break,
+          the same task/goal carries into the next interval automatically.
+        </p>
+      </div>
+
+      <div class="panels">
+        <!-- A panel -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">A</span> One quiet panel
+          </div>
+          <p class="panel-sub">
+            Everything on one surface with sensible defaults pre-filled. Sam can
+            just hit Start.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div
+                  class="center"
+                  style="
+                    min-height: 430px;
+                    padding: 24px;
+                    background: var(--paper-2);
+                  "
+                >
+                  <div class="box sk" style="width: 480px; max-width: 100%">
+                    <div class="edge"></div>
+                    <div class="h2">Start a focus session</div>
+                    <p class="field-label mt8">What are you working on?</p>
+                    <div class="inp block">
+                      Finish API contract ⌄
+                      <span class="sub">(type to add new)</span>
+                    </div>
+                    <div class="flex gap10 mt8">
+                      <span class="chip"
+                        ><span class="sw"></span>Time Audit App</span
+                      ><span class="sub" style="align-self: center"
+                        >↩ project autofilled</span
+                      >
+                    </div>
+                    <p class="field-label mt14">
+                      Goal for this block <span class="muted">(optional)</span>
+                    </p>
+                    <div class="inp block">Draft every endpoint</div>
+                    <div class="mt14">
+                      <p class="field-label">Focus length</p>
+                      <div class="seg accent">
+                        <span>15</span><span class="on">25</span><span>60</span
+                        ><span>90</span><span class="add">+</span>
+                      </div>
+                    </div>
+                    <div class="mt14">
+                      <p class="field-label">Intervals</p>
+                      <div class="seg">
+                        <span>2</span><span class="on">4</span><span>6</span
+                        ><span class="add">+</span>
+                      </div>
+                    </div>
+                    <p class="sub mt14">
+                      Break 5 min · long break after 4 · gentle chime
+                    </p>
+                    <button class="btn primary big block mt20">
+                      ▶ Start focus
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>
+                Everything has a default — a valid session is one click away.
+              </li>
+              <li>
+                <b>+</b> at the end of each row reveals a stepper for a custom
+                length or interval count — presets stay clean, power option is
+                tucked away.
+              </li>
+              <li>
+                New task typed here → inline option to set its project/subject.
+              </li>
+              <li>
+                Break length & sound are shown but tucked as a quiet line.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- B wizard -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">B</span> Two-tap wizard
+          </div>
+          <p class="panel-sub">
+            Splits the choice into "what" then "how long" so no screen has more
+            than one decision.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="flex" style="min-height: 430px">
+                  <div
+                    class="col jc"
+                    style="
+                      flex: 1;
+                      padding: 28px;
+                      border-right: 2px dashed var(--ink-faint);
+                    "
+                  >
+                    <p class="sub">step 1 of 2</p>
+                    <div class="h2">What are you doing?</div>
+                    <div class="inp block mt8">Finish API contract ⌄</div>
+                    <div class="flex gap6 mt14 wrap">
+                      <span class="chip accent">Finish API contract</span
+                      ><span class="chip">MS EE check</span
+                      ><span class="chip">+ new task</span>
+                    </div>
+                    <p class="sub mt14">recent tasks — tap one</p>
+                  </div>
+                  <div class="col jc" style="flex: 1; padding: 28px">
+                    <p class="sub">step 2 of 2</p>
+                    <div class="h2">For how long?</div>
+                    <div class="flex gap10 mt8 wrap ac">
+                      <div
+                        class="box sk center"
+                        style="width: 80px; height: 70px"
+                      >
+                        <div class="edge"></div>
+                        15m
+                      </div>
+                      <div
+                        class="box sk center"
+                        style="width: 80px; height: 70px"
+                      >
+                        <div class="edge"></div>
+                        25m
+                      </div>
+                      <div
+                        class="box sk center"
+                        style="width: 80px; height: 70px"
+                      >
+                        <div class="edge"></div>
+                        60m
+                      </div>
+                      <div
+                        class="box sk center"
+                        style="width: 80px; height: 70px"
+                      >
+                        <div class="edge"></div>
+                        90m
+                      </div>
+                      <div
+                        class="box sk center tile-add"
+                        style="
+                          width: 80px;
+                          height: 70px;
+                          background: var(--accent-bg);
+                          border-color: var(--accent);
+                        "
+                      >
+                        <div
+                          class="edge"
+                          style="border-color: var(--accent)"
+                        ></div>
+                        <b>+</b>custom
+                      </div>
+                    </div>
+                    <div class="flex ac gap10 mt8">
+                      <span class="stepper"
+                        ><span class="pm minus">−</span
+                        ><span class="val">45<small>min</small></span
+                        ><span class="pm plus">+</span></span
+                      ><span class="sub">your own length</span>
+                    </div>
+                    <p class="field-label mt14">× how many?</p>
+                    <div class="seg">
+                      <span>2</span><span class="on">4</span><span>6</span
+                      ><span class="add">+</span>
+                    </div>
+                    <button class="btn primary big block mt20">▶ Start</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>Big tappable duration tiles — no tiny dropdowns.</li>
+              <li>
+                Tapping <b>+ custom</b> swaps in a − 45 min + stepper right
+                below; same <b>+</b> trick on “how many”.
+              </li>
+              <li>One decision per panel = lowest cognitive load.</li>
+              <li>Slower for power users; great for first-timers.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CHECK-IN ============================== -->
+    <section class="screen" id="checkin">
+      <div class="screen-head">
+        <span class="tag">the differentiator</span>
+        <h2>Post-interval check-in</h2>
+        <p class="intent">
+          When a focus block ends, score how focused you were 1–10. It's
+          required to start the break — one tap, friction-low. This is what
+          makes the app an <i>audit</i> loop and not just another pomodoro
+          timer.
+        </p>
+      </div>
+
+      <div class="panels cols" style="gap: 40px">
+        <!-- A scale -->
+        <div class="panel" style="width: 560px">
+          <div class="panel-label">
+            <span class="letter">A</span> Tap a number 1–10
+          </div>
+          <p class="panel-sub">
+            Fastest possible. Big targets, neutral framing, then "Start break".
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div
+                  class="center"
+                  style="
+                    min-height: 360px;
+                    flex-direction: column;
+                    padding: 28px;
+                  "
+                >
+                  <p class="sub">block done — nice work 🎉</p>
+                  <div class="h2 tcenter" style="max-width: 360px">
+                    How focused did that 25&nbsp;min feel?
+                  </div>
+                  <div class="scale jc mt20" style="max-width: 480px">
+                    <span class="n">1</span><span class="n">2</span
+                    ><span class="n">3</span><span class="n">4</span
+                    ><span class="n">5</span><span class="n">6</span
+                    ><span class="n on">7</span><span class="n">8</span
+                    ><span class="n">9</span><span class="n">10</span>
+                  </div>
+                  <div
+                    class="between mt8"
+                    style="width: 480px; max-width: 100%"
+                  >
+                    <span class="sub">scattered</span
+                    ><span class="sub">locked in</span>
+                  </div>
+                  <button class="btn primary big mt28">
+                    Start 5-min break →
+                  </button>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>
+                "Required to start break" but it's a single tap — never a chore.
+              </li>
+              <li>Language is curious, not judgemental ("how did it feel").</li>
+              <li>No red, no "you failed" — even a 2 is just data.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- B slider -->
+        <div class="panel" style="width: 430px">
+          <div class="panel-label">
+            <span class="letter">B</span> One gentle slider
+          </div>
+          <p class="panel-sub">
+            A single drag instead of ten targets — even lighter, more playful.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div
+                  class="center"
+                  style="
+                    min-height: 360px;
+                    flex-direction: column;
+                    padding: 28px;
+                  "
+                >
+                  <div class="h2 tcenter">How focused were you?</div>
+                  <div
+                    class="h1"
+                    style="font-size: 54px; color: var(--accent-ink)"
+                  >
+                    7<span class="sub" style="font-size: 20px">/10</span>
+                  </div>
+                  <div
+                    class="box"
+                    style="
+                      width: 300px;
+                      height: 18px;
+                      border-radius: 999px;
+                      padding: 0;
+                      position: relative;
+                      margin-top: 10px;
+                    "
+                  >
+                    <span
+                      style="
+                        position: absolute;
+                        left: 0;
+                        top: -2px;
+                        bottom: -2px;
+                        width: 68%;
+                        background: var(--accent);
+                        border: 2px solid var(--accent-ink);
+                        border-radius: 999px;
+                      "
+                    ></span>
+                    <span
+                      style="
+                        position: absolute;
+                        left: 64%;
+                        top: -9px;
+                        width: 30px;
+                        height: 30px;
+                        border: 2.5px solid var(--line);
+                        border-radius: 50%;
+                        background: var(--card);
+                      "
+                    ></span>
+                  </div>
+                  <div class="between mt14" style="width: 300px">
+                    <span class="sub">1</span><span class="sub">10</span>
+                  </div>
+                  <button class="btn primary big mt28">Start break →</button>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>Feels tactile and quick; one gesture commits it.</li>
+              <li>Big live number gives instant feedback while dragging.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== FLOATING BANNER ============================== -->
+    <section class="screen" id="banner">
+      <div class="screen-head">
+        <span class="tag">the thing you love</span>
+        <h2>Floating focus bar</h2>
+        <p class="intent">
+          The always-on-top, drag-anywhere reminder that lives on screen no
+          matter which app you're in — showing time left and the goal (or task,
+          if no goal). Three sizes/shapes; the desk hatching is just "any other
+          app behind it".
+        </p>
+      </div>
+
+      <div class="panels cols" style="gap: 36px">
+        <!-- A pill -->
+        <div class="panel compact" style="width: 520px">
+          <div class="panel-label"><span class="letter">A</span> Pill</div>
+          <p class="panel-sub">
+            Smallest footprint. The bar grows to fit the goal; very long goals
+            truncate with …
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="desk">
+                <div class="wallpaper-note">// whatever app Sam is in</div>
+                <div
+                  class="banner"
+                  style="top: 18px; left: 18px; max-width: calc(100% - 36px)"
+                >
+                  <span class="grip">⠿</span><span class="play"></span>
+                  <b>24:18</b
+                  ><span
+                    class="sub"
+                    style="
+                      max-width: 340px;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                    "
+                    >Draft every endpoint &amp; write the auth tests</span
+                  >
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>
+                Goal is the label; falls back to task name if no goal set.
+              </li>
+              <li>⠿ grip = draggable anywhere, like the Rize bar.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- B mini circle -->
+        <div class="panel compact">
+          <div class="panel-label"><span class="letter">B</span> Mini ring</div>
+          <p class="panel-sub">Tiny circular glance, expands on hover.</p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="desk">
+                <div class="wallpaper-note">// whatever app Sam is in</div>
+                <div
+                  class="banner"
+                  style="
+                    bottom: 18px;
+                    right: 18px;
+                    border-radius: 50%;
+                    padding: 0;
+                    width: 74px;
+                    height: 74px;
+                    justify-content: center;
+                  "
+                >
+                  <div
+                    class="timer-ring wobble"
+                    style="width: 64px; height: 64px; border-width: 6px"
+                  >
+                    <div class="inner">
+                      <div class="time" style="font-size: 18px">24:18</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>Most out-of-the-way; for people who find text bars noisy.</li>
+              <li>Hover → expands into the pill (A) with the goal.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- C expanded -->
+        <div class="panel compact">
+          <div class="panel-label">
+            <span class="letter">C</span> Expanded card
+          </div>
+          <p class="panel-sub">
+            A little more context: progress bar + interval count.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="desk">
+                <div class="wallpaper-note">// whatever app Sam is in</div>
+                <div
+                  class="banner"
+                  style="
+                    top: 18px;
+                    left: 18px;
+                    border-radius: 14px;
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 6px;
+                    padding: 12px 14px;
+                    width: 210px;
+                  "
+                >
+                  <div class="between">
+                    <b>24:18</b><span class="sub">2 / 4</span>
+                  </div>
+                  <div class="sub" style="font-size: 13px">
+                    Draft every endpoint
+                  </div>
+                  <div
+                    class="box"
+                    style="height: 10px; padding: 0; border-radius: 999px"
+                  >
+                    <span
+                      style="
+                        display: block;
+                        height: 100%;
+                        width: 40%;
+                        background: var(--accent);
+                        border-radius: 999px;
+                      "
+                    ></span>
+                  </div>
+                  <div class="flex gap6">
+                    <span class="grip">⠿</span><span class="play"></span
+                    ><span class="sub">pause · end</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>
+                Shows the finish line (interval 2/4) right on the desktop.
+              </li>
+              <li>Still draggable; collapses back to the pill.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== INSIGHTS ============================== -->
+    <section class="screen" id="insights">
+      <div class="screen-head">
+        <span class="tag">hero screen ★</span>
+        <h2>Insights</h2>
+        <p class="intent">
+          The payoff. Focus vs break time and average focus score across day /
+          week / month, broken down by task or project. The hard part: make it a
+          kind feedback loop, never a place Sam goes to feel bad.
+        </p>
+      </div>
+
+      <div class="panels">
+        <!-- A Rize-like dashboard -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">A</span> Full dashboard (Rize-style)
+          </div>
+          <p class="panel-sub">
+            Donut + category breakdown + histogram + focus-score, with
+            day/week/month and Tasks/Projects tabs.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="app">
+                  <aside class="sidebar">
+                    <div class="ws-switch">
+                      <span class="av"></span> Sam's space ⌄
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Tasks</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Projects
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Timer</div>
+                    <div class="nav-item active">
+                      <span class="ico"></span> Insights
+                    </div>
+                  </aside>
+                  <div class="content">
+                    <div class="between mb14">
+                      <div class="h1">Insights</div>
+                      <div class="flex gap10">
+                        <span class="seg accent"
+                          ><span class="on">Day</span><span>Week</span
+                          ><span>Month</span></span
+                        >
+                      </div>
+                    </div>
+                    <div class="tabs mb14">
+                      <span class="on">Projects</span><span>Tasks</span>
+                    </div>
+                    <div class="flex gap14 wrap">
+                      <div class="box" style="width: 200px">
+                        <p class="field-label">Where time went</p>
+                        <div class="center mt8">
+                          <div
+                            class="donut wobble"
+                            style="width: 140px; height: 140px"
+                          >
+                            <div class="hole" style="width: 78px; height: 78px">
+                              <b>5h 1m</b><small>tracked</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box grow">
+                        <p class="field-label mb8">Projects</p>
+                        <div class="catrow">
+                          <span class="pct">61%</span>
+                          <div class="meter">
+                            <span
+                              style="width: 61%; background: var(--accent)"
+                            ></span>
+                          </div>
+                          <span>Time Audit App · 3h 4m</span>
+                        </div>
+                        <div class="catrow">
+                          <span class="pct">28%</span>
+                          <div class="meter">
+                            <span style="width: 28%"></span>
+                          </div>
+                          <span>Stanford Pathway · 1h 25m</span>
+                        </div>
+                        <div class="catrow">
+                          <span class="pct">11%</span>
+                          <div class="meter">
+                            <span style="width: 11%"></span>
+                          </div>
+                          <span>CS &amp; SWE Learning · 32m</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex gap14 wrap mt14">
+                      <div class="box grow">
+                        <p class="field-label mb8">
+                          Focus vs break (this week)
+                        </p>
+                        <div class="bars wobble chart-frame">
+                          <div class="bar accent" style="height: 45%">
+                            <span class="lab">Mon</span>
+                          </div>
+                          <div class="bar accent" style="height: 62%">
+                            <span class="lab">Tue</span>
+                          </div>
+                          <div class="bar accent" style="height: 70%">
+                            <span class="lab">Wed</span>
+                          </div>
+                          <div class="bar accent" style="height: 82%">
+                            <span class="lab">Thu</span>
+                          </div>
+                          <div class="bar accent" style="height: 95%">
+                            <span class="lab">Fri</span>
+                          </div>
+                        </div>
+                        <div class="legend mt28">
+                          <span
+                            ><i style="background: var(--accent)"></i>focus 7h
+                            45m</span
+                          ><span><i></i>break 50m</span>
+                        </div>
+                      </div>
+                      <div class="box" style="width: 190px">
+                        <p class="field-label">Avg focus score</p>
+                        <div class="center mt8">
+                          <div
+                            class="donut accentring wobble"
+                            style="--p: 69%; width: 120px; height: 120px"
+                          >
+                            <div class="hole" style="width: 74px; height: 74px">
+                              <b>6.9</b><small>/ 10</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>One screen, all four breakdowns — power-user payoff.</li>
+              <li>
+                Tasks/Projects tab + Day/Week/Month covers every PRD view.
+              </li>
+              <li>Risk: chart-heavy. Could feel clinical for a bad week.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- B story -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">B</span> Kind "story" layout
+          </div>
+          <p class="panel-sub">
+            Leads with one warm sentence and a single number. Charts are
+            supporting, not the headline. Built to feel safe after a rough day.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="app">
+                  <aside class="sidebar">
+                    <div class="ws-switch">
+                      <span class="av"></span> Sam's space ⌄
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Tasks</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Projects
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Timer</div>
+                    <div class="nav-item active">
+                      <span class="ico"></span> Insights
+                    </div>
+                  </aside>
+                  <div class="content">
+                    <div class="between mb14">
+                      <div class="seg accent">
+                        <span class="on">Day</span><span>Week</span
+                        ><span>Month</span>
+                      </div>
+                    </div>
+                    <div
+                      class="box sk"
+                      style="
+                        background: var(--accent-bg);
+                        border-color: var(--accent);
+                      "
+                    >
+                      <div
+                        class="edge"
+                        style="border-color: var(--accent)"
+                      ></div>
+                      <div class="h2" style="margin: 0">
+                        This week you focused for
+                      </div>
+                      <div class="h1" style="font-size: 46px">
+                        7h 45m
+                        <span class="sub" style="font-size: 18px"
+                          >across 11 sessions</span
+                        >
+                      </div>
+                      <p class="sub">
+                        That's a little more than last week. Most of it went to
+                        Time Audit App.
+                      </p>
+                    </div>
+                    <div class="flex gap14 wrap mt14">
+                      <div class="box grow">
+                        <p class="field-label mb8">Your focus, day by day</p>
+                        <div class="bars wobble chart-frame">
+                          <div class="bar" style="height: 30%">
+                            <span class="lab">M</span>
+                          </div>
+                          <div class="bar" style="height: 55%">
+                            <span class="lab">T</span>
+                          </div>
+                          <div class="bar" style="height: 62%">
+                            <span class="lab">W</span>
+                          </div>
+                          <div class="bar" style="height: 75%">
+                            <span class="lab">T</span>
+                          </div>
+                          <div class="bar accent" style="height: 95%">
+                            <span class="lab">F</span>
+                          </div>
+                          <div class="bar" style="height: 8%">
+                            <span class="lab">S</span>
+                          </div>
+                          <div class="bar" style="height: 8%">
+                            <span class="lab">S</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box" style="width: 200px">
+                        <p class="field-label">Avg focus score</p>
+                        <div
+                          class="h1 mt8"
+                          style="font-size: 40px; color: var(--accent-ink)"
+                        >
+                          6.9<span class="sub" style="font-size: 18px"
+                            >/10</span
+                          >
+                        </div>
+                        <p class="sub">trending up ↗ from 6.2</p>
+                        <div class="hatch mt8" style="height: 40px">
+                          tiny sparkline
+                        </div>
+                      </div>
+                    </div>
+                    <p class="sub mt14">
+                      Want the detail?
+                      <b>See full breakdown by project &amp; task →</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>
+                Headline is a sentence, not a dashboard — emotionally safe.
+              </li>
+              <li>
+                Comparisons are framed kindly ("a little more"), never red.
+              </li>
+              <li>Detail (A) is one click away for when Sam wants it.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- C metric grid -->
+        <div class="panel">
+          <div class="panel-label">
+            <span class="letter">C</span> Metric-card grid
+          </div>
+          <p class="panel-sub">
+            Scannable tiles, each one number. Good middle ground — glanceable
+            but complete.
+          </p>
+          <div class="panel-body">
+            <div class="device">
+              <div class="win">
+                <div class="win-bar">
+                  <span class="dot"></span><span class="dot"></span
+                  ><span class="dot"></span
+                  ><span class="title">TIME&nbsp;AUDIT</span>
+                </div>
+                <div class="app">
+                  <aside class="sidebar">
+                    <div class="ws-switch">
+                      <span class="av"></span> Sam's space ⌄
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Tasks</div>
+                    <div class="nav-item">
+                      <span class="ico"></span> Projects
+                    </div>
+                    <div class="nav-item"><span class="ico"></span> Timer</div>
+                    <div class="nav-item active">
+                      <span class="ico"></span> Insights
+                    </div>
+                  </aside>
+                  <div class="content">
+                    <div class="between mb14">
+                      <div class="h1">Insights</div>
+                      <div class="seg accent">
+                        <span>Day</span><span class="on">Week</span
+                        ><span>Month</span>
+                      </div>
+                    </div>
+                    <div class="flex gap14 wrap">
+                      <div class="box sk" style="width: calc(33% - 10px)">
+                        <div class="edge"></div>
+                        <p class="field-label">Focus time</p>
+                        <div
+                          class="h1"
+                          style="font-size: 34px; color: var(--accent-ink)"
+                        >
+                          7h 45m
+                        </div>
+                      </div>
+                      <div class="box sk" style="width: calc(33% - 10px)">
+                        <div class="edge"></div>
+                        <p class="field-label">Break time</p>
+                        <div class="h1" style="font-size: 34px">50m</div>
+                      </div>
+                      <div class="box sk" style="width: calc(33% - 10px)">
+                        <div class="edge"></div>
+                        <p class="field-label">Avg focus score</p>
+                        <div class="h1" style="font-size: 34px">6.9</div>
+                      </div>
+                    </div>
+                    <div class="flex gap14 wrap mt14">
+                      <div class="box grow">
+                        <p class="field-label mb8">Focus time per day</p>
+                        <div class="bars wobble chart-frame">
+                          <div class="bar accent" style="height: 35%">
+                            <span class="lab">Mon</span>
+                          </div>
+                          <div class="bar accent" style="height: 55%">
+                            <span class="lab">Tue</span>
+                          </div>
+                          <div class="bar accent" style="height: 62%">
+                            <span class="lab">Wed</span>
+                          </div>
+                          <div class="bar accent" style="height: 78%">
+                            <span class="lab">Thu</span>
+                          </div>
+                          <div class="bar accent" style="height: 95%">
+                            <span class="lab">Fri</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box" style="width: 210px">
+                        <p class="field-label mb8">By task / project</p>
+                        <div class="tabs mb8">
+                          <span class="on">Tasks</span><span>Projects</span>
+                        </div>
+                        <div
+                          class="catrow"
+                          style="grid-template-columns: 1fr auto"
+                        >
+                          <span>API contract</span
+                          ><span class="sub">3h 46m</span>
+                        </div>
+                        <div
+                          class="catrow"
+                          style="grid-template-columns: 1fr auto"
+                        >
+                          <span>EE check</span><span class="sub">25m</span>
+                        </div>
+                        <div
+                          class="catrow"
+                          style="grid-template-columns: 1fr auto"
+                        >
+                          <span>Plan dashboard</span
+                          ><span class="sub">10m</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="notes">
+              <li>Top row = the three numbers from the PRD, instantly.</li>
+              <li>Tabs swap the breakdown list between tasks and projects.</li>
+              <li>Less warm than B, less busy than A.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // tab switching
+      const nav = document.getElementById("nav");
+      nav.addEventListener("click", function (e) {
+        const btn = e.target.closest("button");
+        if (!btn) return;
+        const id = btn.dataset.s;
+        document.querySelectorAll(".screen-nav button").forEach(function (b) {
+          b.classList.toggle("active", b === btn);
+        });
+        document.querySelectorAll(".screen").forEach(function (s) {
+          s.classList.toggle("active", s.id === id);
+        });
+        window.scrollTo(0, 0);
+      });
+
+      // simple tweaks: annotations + accent
+      function bindToggle(id, cls) {
+        const el = document.getElementById(id);
+        el.addEventListener("click", function () {
+          el.classList.toggle("on");
+          document.body.classList.toggle(cls, !el.classList.contains("on"));
+        });
+      }
+      bindToggle("t-notes", "no-notes");
+      bindToggle("t-accent", "no-accent");
+    </script>
+
+    <template id="__bundler_thumbnail">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100" height="100" fill="#6f9bd1" />
+        <circle
+          cx="50"
+          cy="44"
+          r="22"
+          fill="none"
+          stroke="#f4f1ea"
+          stroke-width="6"
+          stroke-dasharray="90 40"
+          stroke-linecap="round"
+        />
+        <text
+          x="50"
+          y="84"
+          font-family="cursive"
+          font-size="13"
+          fill="#f4f1ea"
+          text-anchor="middle"
+        >
+          wires
+        </text>
+      </svg>
+    </template>
+  </body>
+</html>
