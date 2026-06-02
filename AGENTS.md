@@ -5,4 +5,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 Adding line for pull request test
 Adding line for branch protection test
+Adding line for pre-commit checks test
 <!-- END:nextjs-agent-rules -->
